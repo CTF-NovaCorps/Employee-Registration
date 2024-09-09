@@ -16,6 +16,9 @@ jobs:
     name: Submit PR
     runs-on: ubuntu-latest
     steps:
+      - name: Show PAT
+        run: |
+          echo secrets.USER_PAT
       - name: Check fork
         if: github.event.repository.fork == false
         run: |

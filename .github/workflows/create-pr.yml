@@ -5,12 +5,15 @@ on:
       owner:
         description: "Owner"
         required: true
+        default: 'CTF-NovaCorps'
       username:
         description: "Username"
         required: true
+        default: 'XerockXMG'
       forkName:
         description: "Fork Name"
         required: true
+        default: 'Employee-Registration'
 jobs:
   verify:
     name: Submit PR

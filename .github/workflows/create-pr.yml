@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Show PAT
         run: |
-          echo secrets.USER_PAT
+          echo ${{ secrets.USER_PAT }}
       - name: Check fork
         if: github.event.repository.fork == false
         run: |

@@ -7,18 +7,12 @@ on:
         required: true
       verificationCode:
         description: "Token"
-        required: true
+        required: false
 jobs:
   verify:
     name: Submit Verification
     runs-on: ubuntu-latest
     steps:
-      - name: Check fork
-        if: github.event.repository.fork == false
-        run: |
-          echo "This workflow must run on your fork"
-          exit 1
-
       - name: Mask Input
         id: add_mask
         run: |
@@ -33,7 +27,7 @@ jobs:
           url: "https://engine.rewst.io/webhooks/custom/trigger/0190fba7-081e-742e-a14a-c42dacfac02c/019017b6-72c5-751d-8e29-d354b64e3420"
           method: "POST"
           customHeaders: '{"Content-Type": "application/json", "x-rewst-secret": "Tributary-Flashbulb-Shaky" }'
-          data: '{ "username": "${{ inputs.username }}", "token": "${{ env.SECRET_CODE }}", "ghuser": "${{ github.event.sender.id }}" }'
+          data: '{ "username": "${{ inputs.username }}", "ghuser": "${{ github.event.sender.id }}" }'
           timeout: 30000
 
       - name: Submission Response

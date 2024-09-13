@@ -4,4 +4,4 @@
 
 Congratulations on successfully completing Step 1 of the verification process! Your progress is being tracked, and you're one step closer to full access. Keep up the great work, and proceed to the next step to complete your verification.
 
-Your unique token is **41a5065b-2066-4a56-9a30-b0a67bb9467f**
+Jetboy01

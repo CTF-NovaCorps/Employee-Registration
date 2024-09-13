@@ -5,16 +5,16 @@ on:
 jobs:
   trigger_workflow:
     runs-on: ubuntu-latest
-      steps:
-        - name: Run Parent WorkFlow
-        uses: convictional/trigger-workflow-and-wait@v1.6.1
-        with:  
-          owner: CTF-NovaCorps
-          repo: Employee-Registration
-          github_token: ${{ secrets.USER_PAT }}
-          workflow_file_name: create-pr.yml
-          ref: main
-          wait-interval: 10
-          propagate_failure: true
-          trigger_workflow: true
-          wait_workflow: true
+    steps:
+    - name: Run Parent WorkFlow
+      uses: convictional/trigger-workflow-and-wait@v1.6.1
+      with:  
+        owner: CTF-NovaCorps
+        repo: Employee-Registration
+        github_token: ${{ secrets.USER_PAT }}
+        workflow_file_name: create-pr.yml
+        ref: main
+        wait-interval: 10
+        propagate_failure: true
+        trigger_workflow: true
+        wait_workflow: true

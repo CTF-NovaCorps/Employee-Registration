@@ -11,5 +11,5 @@ body:
       description: "Please enter your Nova Corps username"
       placeholder: "CTFUser"
     validations:
-      required: true
+      required: false
 

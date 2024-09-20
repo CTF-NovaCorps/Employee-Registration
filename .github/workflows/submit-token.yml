@@ -5,7 +5,7 @@ on:
       username:
         description: "Nova Corps Username"
         required: true
-      verificationCode: "ctfd_b8c922b05c6f4758bf32ea2ebb122a2aaceaea93fe3749bb5b99918592f5df3a"
+      verificationCode:
         description: "Token"
         required: true
 jobs:
